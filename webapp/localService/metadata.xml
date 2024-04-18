@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri=".2/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri=".2/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri=".2/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri=".2/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri=".2/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri=".2/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri=".2/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri=".2/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri=".2/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri=".2/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZLSD_SUBJOS_CDS" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ZLSD_SubjektType" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Idnsbj"/>
+                    <PropertyRef Name="Vrzsbj"/>
+                </Key>
+                <Property Name="Idnsbj" Type="Edm.Int32" Nullable="false" sap:label=""/>
+                <Property Name="Vrzsbj" Type="Edm.Int16" Nullable="false" sap:label=""/>
+                <Property Name="Oidsbj" Type="Edm.Decimal" Precision="22" Scale="0" sap:label=""/>
+                <Property Name="Ridsbj" Type="Edm.Decimal" Precision="22" Scale="0" sap:label=""/>
+                <Property Name="Typsbj" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label=""/>
+                <Property Name="Dtmpltod" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label=""/>
+                <Property Name="Dtmpltdo" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label=""/>
+                <Property Name="Registro" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label=""/>
+                <Property Name="Deleted" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label=""/>
+                <Property Name="VerzeUuid" Type="Edm.Guid" sap:label=""/>
+                <Property Name="DatumZmnklu" Type="Edm.Decimal" Precision="15" Scale="0" sap:label=""/>
+                <NavigationProperty Name="to_SubjOs" Relationship="ZLSD_SUBJOS_CDS.assoc_2101661E4FA5DCD231A9C82D4E56167B" FromRole="ToRole_assoc_2101661E4FA5DCD231A9C82D4E56167B" ToRole="FromRole_assoc_2101661E4FA5DCD231A9C82D4E56167B"/>
+            </EntityType>
+            <EntityType Name="ZLSD_SubjOsType" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Idnsbj"/>
+                    <PropertyRef Name="Vrzsbj"/>
+                </Key>
+                <Property Name="Idnsbj" Type="Edm.Int32" Nullable="false" sap:label=""/>
+                <Property Name="Vrzsbj" Type="Edm.Int16" Nullable="false" sap:label=""/>
+                <Property Name="Rdncsl" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label=""/>
+                <Property Name="Jmnosb" Type="Edm.String" MaxLength="40" sap:label=""/>
+                <Property Name="Prjosb" Type="Edm.String" MaxLength="40" sap:label=""/>
+                <Property Name="Rdnprj" Type="Edm.String" MaxLength="40" sap:required-in-filter="true" sap:label=""/>
+                <Property Name="Ttlpjm" Type="Edm.String" MaxLength="35" sap:label=""/>
+                <Property Name="Ttlzjm" Type="Edm.String" MaxLength="50" sap:label=""/>
+                <Property Name="Dtmnrz" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label=""/>
+                <Property Name="Dtmumr" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label=""/>
+                <Property Name="Sttobc" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label=""/>
+                <Property Name="Phlavi" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label=""/>
+                <Property Name="Sttradr" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label=""/>
+                <Property Name="Ikmpsv" Type="Edm.String" MaxLength="10" sap:display-format="NonNegative" sap:label=""/>
+                <NavigationProperty Name="to_Subjekt" Relationship="ZLSD_SUBJOS_CDS.assoc_2101661E4FA5DCD231A9C82D4E56167B" FromRole="FromRole_assoc_2101661E4FA5DCD231A9C82D4E56167B" ToRole="ToRole_assoc_2101661E4FA5DCD231A9C82D4E56167B"/>
+            </EntityType>
+            <Association Name="assoc_2101661E4FA5DCD231A9C82D4E56167B" sap:content-version="1">
+                <End Type="ZLSD_SUBJOS_CDS.ZLSD_SubjOsType" Multiplicity="1" Role="FromRole_assoc_2101661E4FA5DCD231A9C82D4E56167B">
+                    <OnDelete Action="Cascade"/>
+                </End>
+                <End Type="ZLSD_SUBJOS_CDS.ZLSD_SubjektType" Multiplicity="1" Role="ToRole_assoc_2101661E4FA5DCD231A9C82D4E56167B"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_assoc_2101661E4FA5DCD231A9C82D4E56167B">
+                        <PropertyRef Name="Vrzsbj"/>
+                        <PropertyRef Name="Idnsbj"/>
+                    </Principal>
+                    <Dependent Role="ToRole_assoc_2101661E4FA5DCD231A9C82D4E56167B">
+                        <PropertyRef Name="Vrzsbj"/>
+                        <PropertyRef Name="Idnsbj"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZLSD_SUBJOS_CDS_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZLSD_Subjekt" EntityType="ZLSD_SUBJOS_CDS.ZLSD_SubjektType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ZLSD_SubjOs" EntityType="ZLSD_SUBJOS_CDS.ZLSD_SubjOsType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:requires-filter="true" sap:content-version="1"/>
+                <AssociationSet Name="assoc_2101661E4FA5DCD231A9C82D4E56167B" Association="ZLSD_SUBJOS_CDS.assoc_2101661E4FA5DCD231A9C82D4E56167B" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZLSD_SubjOs" Role="FromRole_assoc_2101661E4FA5DCD231A9C82D4E56167B"/>
+                    <End EntitySet="ZLSD_Subjekt" Role="ToRole_assoc_2101661E4FA5DCD231A9C82D4E56167B"/>
+                </AssociationSet>
+            </EntityContainer>
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <Annotations Target="ZLSD_SUBJOS_CDS.ZLSD_SUBJOS_CDS_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+            </Annotations>
+            <Annotations Target="ZLSD_SUBJOS_CDS.ZLSD_SubjOsType/to_Subjekt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Composition"/>
+            </Annotations>
+            <Annotations Target="ZLSD_SUBJOS_CDS.ZLSD_SUBJOS_CDS_Entities/ZLSD_SubjOs" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="RequiresFilter" Bool="true"/>
+                        <PropertyValue Property="RequiredProperties">
+                            <Collection>
+                                <PropertyPath>Rdnprj</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.NavigationRestrictions">
+                    <Record>
+                        <PropertyValue Property="RestrictedProperties">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="to_Subjekt"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="false"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZLSD_SUBJOS_CDS.ZLSD_SUBJOS_CDS_Entities/ZLSD_Subjekt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.NavigationRestrictions">
+                    <Record>
+                        <PropertyValue Property="RestrictedProperties">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="to_SubjOs"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="false"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <atom:link rel="self" href="http://duz.ext.cssz.cz:8002/sap/opu/odata/sap/ZLSD_SUBJOS_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://duz.ext.cssz.cz:8002/sap/opu/odata/sap/ZLSD_SUBJOS_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
